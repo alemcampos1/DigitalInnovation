@@ -1,0 +1,233 @@
+-----------------------GitHub-------------------------------------
+Instrutor: Otavio Reis
+
+>>Introdução ao Git e ao GitHub
+
+>Entendendo o que é Git e sua importância
+
+Ferramenta para controlar/manter versão. 
+Criado em 2005.
+Sistema de versionamento de código distribuído.
+Criado por Linus Torvalds, criador tbm do Linux.
+
+Git e GitHub são duas tecnologias complementares, mas diferentes!!!
+
+Benefícios:
+1.Controle de Versão
+2.Armazenamento em nuvem
+3.Trabalho em equipe
+4.Melhorar seu código
+5.Reconhecimento
+
+O que é GitHub?
+Um servidor remoto para armazenamento de código.
+GitHub - repositório online.
+
+O que o GIT é?
+Um sistema de versionamento de código distribuído.
+
+Por que o Git e GitHub te ajudam a trabalhar em equipe?
+Porque possui ferramentas que favorecem o desenvolvimento em equipe.
+Porque mostra de forma gráfica seu trabalho para outros desenvolvedores.
+Porque versiona seu código de forma segura e disponibiliza o mesmo na internet.
+
+-------------------------------------------------------------------------------
+>>Navegação via command line interface e instalação
+
+>Comandos básicos para um bom desempenho no terminal
+
+Abrir o prompt - cmd
+dir - lista as pastas
+cd - navegar entre as pastas
+cd / - ir para a raiz
+cd .. - retroceder um nível de pasta
+cls - limpar o terminal
+tab - autocompletar nomes
+mkdir - criar pasta
+echo hello > hello.txt - cria um arquivo com o nome hello.txt
+del hello.txt - deleta o arquivo com nome hello.txt
+rmdir - remove diretorio
+
+Linux
+ls - lista as pastas
+cd / - ir para a raiz
+clear ou ctrl+l - limpar o terminal
+mkdir - criar pasta
+rm -rf  - Remover o diretorio com tdo dentro, ele deleta sem perguntar!
+
+-------------------------------------------------------------------------------
+> Ressaltando as principais diferenças entre os sistemas operacionais
+
+Instalando o git no Windows.
+https://git-scm.com/
+
+Baixar e instalar...
+Checar se as opções estão marcadas:
+Git Bash Here
+Git GUI Here
+
+*Ele ensinou a instalar tbm no linux...
+
+-------------------------------------------------------------------------------
+>>Entendendo como o Git funciona por baixo dos panos
+
+>Tópicos fundamentais para entender o funcionamento do Git
+
+SHa - Secure Hash Algorithm (Algoritmo de Hash Seguro), é um conjunto de funções hash criptográficas projetadas pela NSA(Agência de Segurança Nacional dos EUA)
+
+A encriptação gera um conjunto de characteres único, de 40 dígitos.
+É uma forma curta de representar um arquivo.
+
+Todos os arquivos são encriptografados com uma criptografia única.
+
+gitbash - Ferramenta padrão para usar no win ou linux
+*só digitar no pesquisar do windows que aparece... mas o ideal é ir até onde esta a pasta do repositório e clicar com o botão direito - git bash here, para que ele abra já na pasta certa
+
+Na ferramenta clicando na barra de menu com botão direito aparece o menu, onde
+é possível clicar em opções e alterar o tema, por ex.
+
+-------------------------------------------------------------------------------
+>Objetos internos do Git
+
+Blobs 
+Um arquivo.
+Comando para retornar o SHa:
+echo 'conteudo' | git hash-object --stdin
+irá retornar uma criptografia do objeto
+
+echo -e 'conteudo' | openssl sha1
+
+Tree 
+Contém metadados, READM, Rakefile, Lib, aponta para um Blobs que tem um Sha1 e também para outras arvores. 
+É responsável por montar a estrutura de onde estão os arquivos
+
+Commit
+O objeto que vai juntar tudo. Ele aponta para tudo - tree, parente, autor, mensagem.
+
+Por que o GIT é considerado seguro?
+Porque seus objetos estão ligados de maneira encadeada e de difícil alteração.
+
+O que é o SHA1?
+É um algorítimo de encriptação que nos retorna um conjunto de 40 caracteres identificadores.
+
+Com que finalidade o SHA1 é usado no GIT?
+O SHA1 é usado para identificar arquivos.
+
+Quais os três objetos internos do GIT?
+BLOB, TREE e COMMIT
+
+O que é um sistema distribuído?
+Um sistema que possui múltiplas cópias de si mesmo em diferentes locais.
+
+-------------------------------------------------------------------------------
+Iniciando o Git e criando um commit
+
+Todo comando inicia com a palavra git
+
+comando para inicializar o repositorio, entrar na pasta que recebera o comando ex cd livro-receitas e depois:
+git init 
+
+comando para mostrar arquivos ocultos
+ls -a
+
+comando para configurar o git
+git config --global user.email "alemcampos1@gmail.com"
+git config --global user.name alemcampos1
+
+Criando um arquivo Markdown(é uma forma humanizada de escrever HTML)
+
+Markdown		tradução	HTML
+# Título nível1		Título 1	<h1> Título nível 1 </h1>
+## Título nível2	Título 2	<h2> Título nível 2 </h2>
+...
+
+Comandos:
+git add *
+git commit -m "commit inicial"
+
+-----------------------------------------------------------------
+>>Ciclo de vida dos arquivos no Git
+
+>Passo a passo no ciclo de vida
+
+Git Init - inicializa, cria o repositório.
+
+Untracked - arquivo ainda não versionado
+
+Tracked 
+
+Dentro dos arquivos que são rastreados pelo Git eles podem estar em 
+três estágios diferentes: 
+
+-Unmodified: ainda não foi modificado
+-Modified: sofreu modificação
+-Staged: conceito chave. Onde ficam os arquivos que estão se preparando para outro 
+tipo de agrupamento. Estão se preparando para o commit.
+
+Ex. Untracked acabou de ser criado. Após isso o comando "git add" faz com que ele passe para
+o estado Staged. Após modificar um arquivo ele passa de Unmodified para Modified, damos o 
+comando "git add" e ele entra novamente em Staged. Se vc pega um arquivo que não sofreu modificação - Unmodified e remove, ele vai novamente para Untracked. Quando o arquivo esta no Staged ele esta se preparando para o commit, qndo ele recebe o "git commit -m " ele deixa de ser Staged e passa para Commit. O Commit retorna todos os arquivos para Unmodified, para começar o ciclo de novo.
+
+
+Servidor: Remote Repository
+
+Ambiente de desenvolvimento
+Working Directory
+Stafing Area
+Local Repository
+
+comandos:
+
+Retorna os status
+git status
+
+Movendo arquivo para outra pasta
+mv pudim.md ./receitas/
+
+Adicionando novamente versionamento no arquivo movido
+git add pudim.md receitas/
+
+Comitando a modificação
+git commit -m "cria pasta receitas, move arquivo para receitas"
+
+Adicionando um arquivo 
+ echo > README.md
+
+Adiconando todas as modificações do no nosso repositório local para a Stage area
+git add *
+
+Comitando
+git commit -m "adiciona index"
+
+O que foi feito?
+Pegamos nosso diretório de trabalho - Working Directory demos o comando git add, que moveu 
+todos os arquivos(Untracked ou Modified) para Staged, que vão compor nossa área de Stage - Staging Area e quando usamos o comando git commit passamos toda a area de Staging para nosso repositório local - Local Repository de fato.   
+-----------------------------------------------------------------
+>>Introdução ao GitHub
+
+>Trabalhando com o GitHub
+
+É necessário manter o username/name igual ao do Git 
+
+comando linux para saber as configurações do git: 
+git config --list
+
+comando para sair:
+q
+
+comando para alterar as configurações - ele vai apagar o email e o nickname:
+git config --global --unset user.email
+git config --global --unset user.name
+
+comando para inserir novamente passando as alterações
+git config --global user.email "alemcampos1@gmail.com"
+git config --global user.name "alemcampos1"
+
+Criar uma conta no GitHub https://github.com/
+
+Criar um repositório. 
+
+
+
+
+ 
