@@ -227,6 +227,22 @@ Criar uma conta no GitHub https://github.com/
 
 Criar um repositório. 
 
+--Passando projetos do repositório local para o GitHub
+
+Comando:
+git remote add origin https://github.com/alemcampos1/DigitalInnovation.git
+
+*o link é https://github.com/alemcampos1/"nome do repositorio".git
+
+Lista os repositórios:
+git remote -v 
+
+Certificar que não há nenhuma pendencia:
+git status
+
+Enviar o projeto (digitar o comando e dar enter. Ele irá pedir as credenciais - a senha do GitHub):
+git push origin master 
+
 
 
 
