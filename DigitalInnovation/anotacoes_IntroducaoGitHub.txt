@@ -231,6 +231,8 @@ Criar um repositório.
 
 Comando:
 git remote add origin https://github.com/alemcampos1/DigitalInnovation.git
+ou 
+git remote add origin git@github.com:alemcampos1/DigitalInnovation.git
 
 *o link é https://github.com/alemcampos1/"nome do repositorio".git
 
@@ -243,7 +245,21 @@ git status
 Enviar o projeto (digitar o comando e dar enter. Ele irá pedir as credenciais - a senha do GitHub):
 git push origin master 
 
+O que acontece quando você gera commits no seu repositório local com email e nickname diferentes dos utilizados no GitHub?
+Os commits apareceram com email e nickname diferentes no GitHub.
 
+------------------------------------------------------------------------------------
+>>Resolvendo conflitos
 
+>Como os conflitos acontecem no GitHub e como resolve-los
 
- 
+Fazer modificação no arquivo, add as modifições:
+git add *
+
+Comitar
+git commit -m "Modificação realizada"
+
+Enviar a modificação
+git push origin master
+
+Vai dar falha porque o repositório remoto tem alguma coisa que vc não tem. 
