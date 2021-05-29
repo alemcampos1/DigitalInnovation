@@ -1,14 +1,18 @@
------------------------GitHub-------------------------------------
+-----------------------INTRODUÇÃO AO GIT E AO GITHUB------------------------------
 Instrutor: Otavio Reis
 
 >>Introdução ao Git e ao GitHub
 
 >Entendendo o que é Git e sua importância
 
+Git
 Ferramenta para controlar/manter versão. 
 Criado em 2005.
 Sistema de versionamento de código distribuído.
 Criado por Linus Torvalds, criador tbm do Linux.
+
+O que o GIT é?
+Um sistema de versionamento de código distribuído.
 
 Git e GitHub são duas tecnologias complementares, mas diferentes!!!
 
@@ -22,9 +26,6 @@ Benefícios:
 O que é GitHub?
 Um servidor remoto para armazenamento de código.
 GitHub - repositório online.
-
-O que o GIT é?
-Um sistema de versionamento de código distribuído.
 
 Por que o Git e GitHub te ajudam a trabalhar em equipe?
 Porque possui ferramentas que favorecem o desenvolvimento em equipe.
@@ -55,7 +56,7 @@ clear ou ctrl+l - limpar o terminal
 mkdir - criar pasta
 rm -rf  - Remover o diretorio com tdo dentro, ele deleta sem perguntar!
 
--------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 > Ressaltando as principais diferenças entre os sistemas operacionais
 
 Instalando o git no Windows.
@@ -68,7 +69,7 @@ Git GUI Here
 
 *Ele ensinou a instalar tbm no linux...
 
--------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 >>Entendendo como o Git funciona por baixo dos panos
 
 >Tópicos fundamentais para entender o funcionamento do Git
@@ -81,7 +82,7 @@ A encriptação gera um conjunto de characteres único, de 40 dígitos.
 Todos os arquivos são encriptografados com uma criptografia única.
 
 gitbash - Ferramenta padrão para usar no win ou linux
-*só digitar no pesquisar do windows que aparece... mas o ideal é ir até onde esta a pasta do repositório e clicar com o botão direito - git bash here, para que ele abra já na pasta certa
+*só digitar no pesquisar do windows que aparece... mas o ideal é ir até onde esta a pasta do repositório e clicar com o botão direito - git bash here, para que ele abra já na pasta certa.
 
 Na ferramenta clicando na barra de menu com botão direito aparece o menu, onde
 é possível clicar em opções e alterar o tema, por ex.
@@ -119,18 +120,18 @@ BLOB, TREE e COMMIT
 O que é um sistema distribuído?
 Um sistema que possui múltiplas cópias de si mesmo em diferentes locais.
 
--------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 Iniciando o Git e criando um commit
 
 Todo comando inicia com a palavra git
 
-comando para inicializar o repositorio, entrar na pasta que recebera o comando ex cd livro-receitas e depois:
+Comando para inicializar o repositorio. Entrar na pasta que recebera o comando, ex. cd livro-receitas e depois:
 git init 
 
-comando para mostrar arquivos ocultos
+Comando para mostrar arquivos ocultos
 ls -a
 
-comando para configurar o git
+Comando para configurar o git
 git config --global user.email "alemcampos1@gmail.com"
 git config --global user.name alemcampos1
 
@@ -145,12 +146,12 @@ Comandos:
 git add *
 git commit -m "commit inicial"
 
------------------------------------------------------------------
+---------------------------------------------------------------------------------
 >>Ciclo de vida dos arquivos no Git
 
 >Passo a passo no ciclo de vida
 
-Git Init - inicializa, cria o repositório.
+git init - inicializa, cria o repositório.
 
 Untracked - arquivo ainda não versionado
 
@@ -171,12 +172,12 @@ comando "git add" e ele entra novamente em Staged. Se vc pega um arquivo que nã
 
 Servidor: Remote Repository
 
-Ambiente de desenvolvimento
+Ambiente de desenvolvimento:
 Working Directory
 Stafing Area
 Local Repository
 
-comandos:
+Comandos:
 
 Retorna os status
 git status
@@ -193,23 +194,22 @@ git commit -m "cria pasta receitas, move arquivo para receitas"
 Adicionando um arquivo 
  echo > README.md
 
-Adiconando todas as modificações do no nosso repositório local para a Stage area
+Adiconando todas as modificações do nosso repositório local para a Stage area
 git add *
 
 Comitando
 git commit -m "adiciona index"
 
 O que foi feito?
-Pegamos nosso diretório de trabalho - Working Directory demos o comando git add, que moveu 
-todos os arquivos(Untracked ou Modified) para Staged, que vão compor nossa área de Stage - Staging Area e quando usamos o comando git commit passamos toda a area de Staging para nosso repositório local - Local Repository de fato.   
------------------------------------------------------------------
+Pegamos nosso diretório de trabalho - Working Directory demos o comando git add, que moveu todos os arquivos(Untracked ou Modified) para Staged, que vão compor nossa área de Stage - Staging Area e quando usamos o comando git commit passamos toda a area de Staging para nosso repositório local - Local Repository de fato.   
+---------------------------------------------------------------------------------
 >>Introdução ao GitHub
 
 >Trabalhando com o GitHub
 
 É necessário manter o username/name igual ao do Git 
 
-comando linux para saber as configurações do git: 
+Comando linux para saber as configurações do git: 
 git config --list
 
 comando para sair:
@@ -262,4 +262,32 @@ git commit -m "Modificação realizada"
 Enviar a modificação
 git push origin master
 
-Vai dar falha porque o repositório remoto tem alguma coisa que vc não tem. 
+Vai dar falha caso alguma alteração tenha sido no arquivo do repositório remoto, indicando um conflito. 
+
+Comando em caso de conflito, para puxar o que esta lá:
+git pull origin master
+ele vai avisar que há um conflito e vc precisa resolver. Será necessário abrir o arquivo para resolver manualmente.
+
+Logo após resolver:
+git add *
+
+git commit -m "resolve conflitos"
+
+Mando novamente para o repositorio remoto:
+git push origin master
+
+Como baixar repositórios do GitHub:
+Copiar o link do repositorio; onde lista as pastas do repositório em um menu - Code que contém o link.
+Vamos clonar o repositorio:
+git clone https://github.com/python/cpython.git
+
+Quando a gente clona ele já vem como uma pasta de repositorio, e não como uma pasta comum.
+
+Mostrar pastar ocultas 
+ls-a
+
+Para mostrar pra onde o repositório esteja apontando
+git remot -v
+
+
+
