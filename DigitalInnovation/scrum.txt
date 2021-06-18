@@ -1,7 +1,7 @@
 ---------------PROJETOS ÁGEIOS COM SCRUM-------------------
 https://web.digitalinnovation.one/course/projetos-ageis-com-scrum/learning/b042c153-fd80-469c-808a-f374629ea634?back=/browse
 
-Tiago Sano 
+Instrutor: Tiago Sano 
 
 >>Introdução ao Scrum
 
@@ -105,8 +105,8 @@ Time DEV apresenta para o PO o trabalho feito. Numa Sprint de 30 dias o Time Box
 - Retrospectiva da Sprint
 Reunião da equipe para Lições aprendidas - transparência. Time Box: 3h(Sprint 30 dias).
 
-------------------------------------------------------------
->>Fundamentos de um projeto ágil
+
+Fundamentos de um projeto ágil
 
 >Papéis e responsabilidades - Product Owner
 Diego A S Pereira
@@ -120,7 +120,7 @@ O facilitador do time.
 Release Planning
 Liberação ou lançamento de software é o lançamento de nova versão oficial de produto de software. Cada vez que um produto de software é criado ou modificado, o fabricante e seus desenvolvedores decidem sobre como distribuir ou o novo produto ou a modificação às pessoas que o utilizam.
 
-Existem 2 tipos de Release Panning:
+Existem 2 tipos de Release Planning:
 - Release Planning de múltiplas Squads
 - Release Planning de Projeto
 
@@ -150,3 +150,74 @@ A transformação digital é um processo no qual as empresas fazem uso da tecnol
 
 Em qual momento é definido o Sprint Backlog?
 Após a quebra das atividades na Planning.
+
+------------------------------------------------------------
+>>Conceitos e atividades essenciais para o sucesso de um projeto ágil
+Instrutor: Diego A S Pereira
+
+> Aprenda sobre os conceitos e planejamentos de tarefas
+
+Estórias x Tarefas
+Quando todos os épicos estiverem concluídos o projeto estará pronto.
+O épico é o objetico macro que deve ser atingido e para ser atingido esse objetivo macro deve ser quebrado em objetivos menores. 
+
+Estória - conjunto de tarefas. Uma tarefa descrita em nível de negócio.
+Épico - conjunto de estórias.
+Tarefa - Um conjunto de atividades que o time de desenvolvimento deve desempenhar 
+para entregar a estória.
+
+Critério de Aceite
+É uma lista de critérios que precisam ser alcançados para que a estória atenda aos requisitos do cliente. 
+Os critérios de aceitação têm o objetivo de: definir limites para as user stories. Ajudar o P.O. a detalhar em alto nível o que é necessário para entregar valor ao cliente.
+
+Planning Poker - Uma atividade de mensuração do esforço e complexidade das tarefas ou estórias. É o método mais utilizado para fazer estimativa do tamanho das tarefas em times agéis. Cada membro do time de desenvolvimento recebe um deck contendo todos os numeros da sequencia de fibonacci. As estórias são lidas e as tarefas são criadas, após a criação de cada tarefa o time vota jogando uma das cartas, falando qual o tamanho daquela atividade. Deve ser levar em conta a complexidade, o trabalho manual em si e o tempo. Normalmente quando a tarefa recebe 20 pontos, o time entende que a tarefa ou estória esta grande demais e deve ser quebrada em mais. Os membros do time que derem a menor nota devem justificar, porque eles podem ter pensado em alguma coisa que irá facilitar o desenvolvimento. O time fica próximo e um ajuda o outro. 
+
+A Planning precisa ser dividida em duas etapas:
+Na primeira parte o PO irá pegar os itens mais refinados e priorizados do Product Backlog e irá apresenta-lo para o time. O PO junto com o time de desenvolvimento
+lê as estórias e tira as dúvidas.
+Na segunda parte da Plannning o time quebra as tarefas e as estima. É sugerido que o 
+PO não participe para não influenciar. O time irá pegar cada estória e irá escrever quais atividades precisam ser desenvolvidas para que a estória seja considerada entregue. 
+Com as estórias mapeadas e as atividades descritas é definido o Sprint Backlog. 
+Com essa informação na mão o PO deverá validar qual dos itens é considerado mais prioritário e que deve ser considerado o objetivo principal da Sprint. Isso significa que em teoria, se essa atividade cair todo resto da Sprint não fará sentido e que alguma mudança deverá ser realizada no meio da Sprint para que o objetivo da Sprint seja atingido. Ou em casos mais estremos a Sprint é cancelada, já que o objetivo da Sprint não será mais alcançado. 
+
+Stakeholder - uma pessoa ou um grupo que legitima as ações de uma organização e que tem um papel direto ou indireto na gestão e resultados dessa mesma organização. Ex. funcionários, fornecedores, concorrentes, ONGS, clientes...
+
+>Rotinas de um time ágil
+
+Daly e Retrospectiva
+- Tempo total de 15 min
+- Ocorrer sempre no mesmo horário e no mesmo lugar 
+- Presença de todo o time de dev, presença do scrum master e PO não é obrigatória.
+- O objetivo é cada um saber o que o outro esta fazendo e ajudar caso algum esteja
+tendo algum impedimento. 
+- Três perguntas: 
+	- O que foi feito no dia anterior?
+	- O que esta programado para o dia?
+	- Existe algum impedimento? 
+
+Retrospective
+- O time dev e o Scrum Master tem presença obrigatória
+- Acontece apenas uma vez na Sprint, sempre após a conclusão da Sprint
+- A presença do PO é muito importante, porém não é obrigatória 
+- Em times menos maduros é importante separar a Retrospective em duas partes - uma com a presença do PO e outra sem para que o time fique mais a vontade.
+- É discutido principalmente os pontos que foram bons e ruins na Sprint, o que deve-se melhorar, o que não se deve fazer e o que podemos tentar fazer na próxima Sprint. 
+A Daily é focada nas tarefas do dia a dia e a Retro no Sprint como o todo.
+
+Refinamento
+Acontece um passo antes da Planning, porém no final da Sprint anterior; antes da Retro e Review. 
+É uma cerimônia não oficial do Scrum, porém muito utilizada para que o time juntamente com o PO discuta como será a próxima Sprint, qual será os entregaveis e adiantar possíveis dúvidas que normalmente apareceriam apenas na planning. Tem a finalidade de aumentar o entendimento da demanda por parte do time e melhorar a qualidade da entrega e aumentar o retorno esperado no projeto. São feitas várias perguntas para o PO para entender a demanda. É de suma importancia que a estória já esteja bem escrita neste momento, para que fique menos dúvidas possíveis. A ideia é facilitar a planning. 
+A presença de todo o time SCRUM é obrigatória para que todos possam ouvir e entender a demanda e possam ajudar no desenho da melhor solução
+
+Review 
+Objetivo: Verificar se a demanda agrega valor ao negócio.
+Quem apresenta é o time de desenvolvimento. 
+É a oportunidade de mostrar o trabalho que cada um desenvolveu na Sprint anterior e podem tirar qualquer dúvida técnica que o público tenha em relação a solução. 
+Dúvidas de negócio continuam sendo tiradas pelo PO que deve estar presente na cerimônia, assim como o Scrum Master. 
+São convidados todos os interessados na demanda - stakeholders, lideres, gestores...
+A ideia é ver o que esta sendo entregue, validar se esta de acordo com o solicitado, se houve mudança no meio do fluxo, e por fim se agrega valor ao negócio. 
+
+Maturidade do time
+Um time que pode retornar para suas entregas anteriores, verificar o resultado alcançado, cruzar com os resultados esperados; consegue entender melhor o comportamento do seu cliente e assim pode se adaptar para as novas entregas e fazer cada vez de maneira mais acertiva. É um time que de fato consegue vivenciar os pilares do SCRUM - Transparência, Inspeção, Adaptação e que não fica dependendo do Scrum Master para resolver seus problemas. É um time que já conhece o caminho das pedras e tem iniciativa para resolver seus problemas. Um time maduro é um time que anda sozinho.
+
+
+

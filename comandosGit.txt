@@ -1,0 +1,209 @@
+-----------------------------GIT-----------------------------------------------
+
+O Git é um sistema de controle de versão. 
+
+“O controle de versão é um sistema que registra as mudanças feitas em um arquivo 
+ou um conjunto de arquivos ao longo do tempo, de forma que você possa recuperar 
+versões específicas."
+
+//Estados
+Modificado (modified);
+Preparado (staged/index)
+Consolidado (comitted);
+
+--------------------------AJUDA-----------------------------------------------
+git help
+
+//Comando específico
+git help add
+git help commit
+git help <qualquer_comando_git>
+
+----------------------CONFIGURAÇÃO----------------------------------------------
+
+As configurações do GIT são armazenadas no arquivo .gitconfig localizado dentro do 
+diretório do usuário do Sistema Operacional 
+(Ex.: Windows: C:\Users\Documents and Settings\Alessandra).
+
+As configurações realizadas através dos comandos abaixo serão incluídas no arquivo citado acima.
+
+//Setar usuário
+git config --global user.name "alessandra"
+
+//Setar email
+git config --global user.email meuemail@gmail.com.br
+
+//Setar editor
+git config --global core.editor vim
+
+//Setar ferramenta de merge
+git config --global merge.tool vimdiff
+
+//Setar arquivos a serem ignorados
+git config --global core.excludesfile ~/.gitignore
+
+//Listar configurações
+git config --list
+
+----------------------IGNORAR ARQUIVOS----------------------------------------------
+Ignorar Arquivos
+Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo .gitignore não serão adicionados em um repositório. Existem dois arquivos .gitignore, são eles:
+
+Geral: Normalmente armazenado no diretório do usuário do Sistema Operacional. O arquivo que possui a lista dos arquivos/diretórios a serem ignorados por todos os repositórios deverá ser declarado conforme citado acima. O arquivo não precisa ter o nome de .gitignore.
+
+Por repositório: Deve ser armazenado no diretório do repositório e deve conter a lista dos arquivos/diretórios que devem ser ignorados apenas para o repositório específico.
+
+Setar arquivos a serem ignorados
+git config --global core.excludesfile ~/.gitignore
+
+
+-----------------INICIANDO O GIT-----------------------------------------------
+Entre no diretório que deseja controlar a versão e inicie o Git assim:
+git init
+
+Feito isso, seus arquivos ainda não estão sendo versionados, mas eles estão esperando para serem adicionados no estágio de controle. Para fazer isso digite o comando add:
+
+git add nome-do-arquivo-ou-diretorio-incluindo-extensão
+Se você precisa adicionar todos os arquivos do diretório, basta digitar:
+
+git add .
+ou
+git add *
+
+-----------------STATUS GIT-----------------------------------------------
+Saber o status do projeto é importante. Com o comando abaixo você consegue ver quais arquivos estão fora do controle, quais foram modificados e estão esperando por uma descrição de modificação etc:
+
+git status
+
+Voltando ao estágio anterior do adicionamento:
+git reset HEAD nome-do-arquivo
+
+Commit – Comitando:
+git commit -m "Mensagem do commit"
+
+Adicionando e comitando ao mesmo tempo:
+git commit -a -m "Mensagem do commit"
+
+Voltando commits a versões anteriores
+Voltar um commit:
+git reset HEAD~1
+
+Voltar dois commits:
+git reset HEAD~2
+
+Voltando um commit e deixando o arquivo no estagio anterior:
+git reset HEAD~1 --soft
+
+Voltando um commit e excluindo o arquivo, deixando no estágio anterior:
+git reset HEAD~1 --hard
+
+
+-----------------LOG-----------------------------------------------
+Verificando o histórico de commits:
+git log
+Verificando o que foi mudado, diferença entre um arquivo e outro:
+
+git log -p
+Verificando os 2 últimos commits:
+
+git log -p -2
+Mostrando as estatísticas de todos os commits:
+
+git log --stat
+Mostrando todos os commits, cada um em uma linha:
+
+git log --pretty=oneline
+Mostrando todos os commits dos últimos 2 dias até o momento atual
+
+git log --since=2.days
+Criando um branch – uma ramificação
+
+-----------------BRANCH-----------------------------------------------
+git checkout -b nome-do-branch
+Verificando em que branch você está
+
+git branch
+Voltando para o branch master
+
+git checkout master
+Jogando o branch criado no branch master
+Entre como branch master:
+
+git merge nome-do-branch-que-foi-criado
+Grudando o branch criado no branch master sem o commit
+Somente localmente – localhost, entre como branch master:
+
+git rebase nome-do-branch-que-foi-criado
+Removendo um branch:
+
+git branch -D nome-do-branch
+Vendo branchs remotos:
+
+git branch -a
+Mostrando o início do hash, quem comitou, quanto tempo atrás, mensagem: descrição do commit:
+
+git log --pretty=format: "%h - %an, %ar : %s"
+Deletando arquivos:
+
+git rm nome-do-arquivo
+Deletando todos os aquivos removidos ao mesmo tempo:
+
+git ls-files --deleted | xargs git rm
+
+-----------------CLONANDO PROJETOS-----------------------------------------------
+
+Clonando e puxando alterações de projetos
+Clonando um projeto remoto:
+
+git clone url-do-projeto
+Fazendo um clone de outros branchs:
+
+git checkout -b nome-do-branch origin/ nome-do-branch
+Trazendo, puxando as alterações feitas por outros usuários:
+
+---------------------EXIBIR REPOSITÓRIOS REMOTOS-------------------------
+
+git remote
+
+git remote -v
+
+
+-------------------REPOSITÓRIO REMOTO-----------------------------------------
+
+Vincular repositório local com um repositório remoto
+
+git remote add origin https://github.com/alemcampos1/DigitalInnovation.git
+ou 
+git remote add origin git@github.com:alemcampos1/DigitalInnovation.git
+
+Sincronizando tudo que está no repositório remoto:
+
+git pull
+Enviando o(s) projeto(s), arquivo(s) para o repositório:
+
+git push origin master
+Enviando um branch para o repositório:
+
+git push origin nome-do-branch
+
+-----------------TAGS-----------------------------------------------
+Tags
+As tags servem para marcar uma etapa. Imagine que você vai lançar uma versão, que resolve uma série de problemas. Você pode marcar aquela etapa criando uma tag. Assim fica simples de fazer qualquer rollback do projeto para uma tag específica em vez de voltar para um commit. Você sabe que tudo o que foi feito até aquela tag está funcionando.
+
+Criando tags:
+
+git tag versão-da-tag
+Listando tags:
+
+git tag -l
+Enviando a tag para o repositório
+
+git push origin master --tags
+Removendo as tags criadas localmente:
+
+git tag -d versão-da-tag
+Removendo tag no repositório remoto:
+
+git push origin :refs/tags/versão-da-tag
+
+
